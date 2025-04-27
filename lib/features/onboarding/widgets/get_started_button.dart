@@ -1,5 +1,5 @@
 import 'package:doctor_app/config/routes/app_routes.dart';
-import 'package:doctor_app/core/helper/extensions.dart';
+import 'package:doctor_app/core/helpers/extensions.dart';
 import 'package:doctor_app/core/utils/colors.dart';
 import 'package:doctor_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
