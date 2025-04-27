@@ -14,26 +14,28 @@ class OnBoardingScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 30.h),
-          child: Column(
-            children: [
-              const DocLogoAndName(),
-              SizedBox(height: 41.h),
-              const DoctorImageAndText(),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30.w),
-                child: Column(
-                  children: [
-                    Text(
-                      "Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.",
-                      style: TextStyles.font13GrayRegular,
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: 30.h),
-                    const GetStartedButton(),
-                  ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const DocLogoAndName(),
+                SizedBox(height: 41.h),
+                const DoctorImageAndText(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30.w),
+                  child: Column(
+                    children: [
+                      Text(
+                        "Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.",
+                        style: TextStyles.font13GrayRegular,
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 30.h),
+                      const GetStartedButton(),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
