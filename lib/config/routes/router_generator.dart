@@ -1,7 +1,8 @@
 import 'package:doctor_app/config/routes/app_routes.dart';
-import 'package:doctor_app/features/auth/login/login_screen.dart';
 import 'package:doctor_app/features/onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../../features/auth/presentation/pages/login_screen.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
