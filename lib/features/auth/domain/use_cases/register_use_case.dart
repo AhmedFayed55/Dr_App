@@ -15,7 +15,7 @@ class RegisterUseCase {
     String name,
     String email,
     String phone,
-    String gender,
+    int gender,
     String password,
     String rePassword,
   ) {

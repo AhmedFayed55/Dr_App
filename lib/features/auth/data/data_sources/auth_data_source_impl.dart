@@ -49,7 +49,7 @@ class AuthDataSourceImpl implements AuthDataSource {
     String name,
     String email,
     String phone,
-    String gender,
+      int gender,
     String password,
     String rePassword,
   ) async {
@@ -64,10 +64,10 @@ class AuthDataSourceImpl implements AuthDataSource {
             "name": name,
             "email": email,
             "phone": phone,
+            "gender": gender,
             "password": password,
             "password_confirmation": rePassword,
-          },
-        );
+          });
 
         var registerResponse = LoginOrRegisterResponseDm.fromJson(
           jsonResponse.data,
