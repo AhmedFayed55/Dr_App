@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
         if (state is LoginErrorState) {
           DialogueUtils.hideLoading(context);
           DialogueUtils.showMessage(
-              context: context, message: state.error.errorMessage,
+              context: context, message: "Something went wrong",
               title: "Error", posActionName: "Ok");
         } else if (state is LoginSuccessState) {
           DialogueUtils.hideLoading(context);
@@ -107,9 +107,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         viewModel.login();
                       }),
                   verticalSpace(45),
-                  OrSignInWith(),
+                  const OrSignInWith(),
                   verticalSpace(45),
-                  OtherSignInMethods(),
+                  const OtherSignInMethods(),
                   verticalSpace(25),
                   const TermsAndConditionsText(),
                   verticalSpace(25),

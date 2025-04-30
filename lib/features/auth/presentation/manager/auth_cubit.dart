@@ -14,10 +14,16 @@ class AuthViewModel extends Cubit<AuthStates> {
 
   final formKey = GlobalKey<FormState>();
   TextEditingController emailController = TextEditingController(
-    text: "jooeldaw@gmail.com",
-  );
+      text: 'jooeldjaw@gmail.com');
   TextEditingController passwordController = TextEditingController(
     text: "123456@aA",
+  );
+  TextEditingController rePasswordController = TextEditingController(
+    text: "123456@aA",
+  );
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController nameController = TextEditingController(
+    text: "mortsafe",
   );
 
   void login() async {
@@ -38,5 +44,23 @@ class AuthViewModel extends Cubit<AuthStates> {
     }
   }
 
-  void register() async {}
+  void register() async {
+    if (formKey.currentState!.validate()) {
+      emit(AuthLoadingState());
+      var either = await registerUseCase.invoke(nameController.text,
+          emailController.text,
+          phoneController.text,
+          1,
+          passwordController.text,
+          rePasswordController.text);
+      either.fold(
+            (error) {
+          emit(RegisterErrorState(error: error));
+        },
+            (response) {
+          emit(RegisterSuccessState(response));
+        },
+      );
+    }
+  }
 }
