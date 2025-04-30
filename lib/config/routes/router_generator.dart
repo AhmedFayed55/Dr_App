@@ -1,4 +1,5 @@
 import 'package:doctor_app/config/routes/app_routes.dart';
+import 'package:doctor_app/features/auth/presentation/pages/register_screen.dart';
 import 'package:doctor_app/features/onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => OnBoardingScreen());
       case Routes.loginScreen:
         return MaterialPageRoute(builder: (_) => LoginScreen());
+      case Routes.signUpScreen:
+        return MaterialPageRoute(builder: (_) => RegisterScreen());
       default:
         return MaterialPageRoute(
           builder:
