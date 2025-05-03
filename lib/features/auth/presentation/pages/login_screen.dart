@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
               title: "Success",
               posActionName: "Ok",
               posAction: () {
-                context.pushNamed(Routes.onBoardingScreen);
+                context.pushNamed(Routes.homeScreen);
               });
         } else {
           DialogueUtils.showLoading(
